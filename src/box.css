@@ -1,0 +1,51 @@
+body {
+    background-image: url("https://www.freevector.com/uploads/vector/preview/30347/Creative_Geometric_Background.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.title {
+    color: rgb(172, 72, 72);
+    text-shadow: 2px 2px 2px black;
+    margin: 5px;
+    padding: 0px;
+    margin-bottom: 20px;
+    font-family:cursive;
+    font-size: 30pt;
+    margin-left: 2%;
+}
+
+h2, h3 {
+    color: rgb(238, 94, 94);
+    text-shadow: 2px 2px 2px black;
+    margin: 5px;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 16pt;
+    margin-right: 5%;
+}
+
+
+.box-box{
+    
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    background-color:rgb(255, 255, 255);
+    padding: 20px;
+    width: 300px;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+.color-box{
+    height: 150px;
+    width: 150px;
+}
+
+.outside-box{
+    display: flex;
+    gap: 10px;
+}

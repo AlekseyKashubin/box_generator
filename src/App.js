@@ -1,23 +1,32 @@
 import logo from './logo.svg';
-import './App.css';
+import './box.css';
+import Box from './components/box';
+import BoxForm from './components/BoxForm';
+import { useState } from 'react';
 
 function App() {
+
+  const [boxes, setBoxes] = useState([])
+
+  const addBox = newBox => {
+    setBoxes(currentBoxes => ([...currentBoxes, newBox]))
+  }
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <BoxForm addFunction={addBox} />
+      <div className='outside-box'>
+        {
+          boxes.map((b, i) => {
+            return (
+              <Box color={b.kColor} />
+            )
+          })
+        }
+      </div>
     </div>
   );
 }
